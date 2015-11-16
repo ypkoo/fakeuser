@@ -28,10 +28,10 @@ CHECK3_Y = 0
 
 def make_msg (finger_x, finger_y, check_x, check_y):
     msg = DEFAULT_MSG.split(';')
-    msg[FINGER_X_IDX] = finger_x
-    msg[FINGER_Y_IDX] = finger_y
-    msg[CHECK_X_IDX] = check_x
-    msg[CHECK_Y_IDX] = check_y
+    msg[FINGER_X_IDX] = str(finger_x)
+    msg[FINGER_Y_IDX] = str(finger_y)
+    msg[CHECK_X_IDX] = str(check_x)
+    msg[CHECK_Y_IDX] = str(check_y)
 
     msg = ';'.join(msg)
 
@@ -39,10 +39,10 @@ def make_msg (finger_x, finger_y, check_x, check_y):
 
 def make_random_msg():
     msg = DEFAULT_MSG.split(';')
-    msg[FINGER_X_IDX] = random.randint(0, 1000)
-    msg[FINGER_Y_IDX] = random.randint(0, 1000)
-    msg[CHECK_X_IDX] = random.randint(0, 1000)
-    msg[CHECK_Y_IDX] = random.randint(0, 1000)
+    msg[FINGER_X_IDX] = str(random.randint(0, 1000))
+    msg[FINGER_Y_IDX] = str(random.randint(0, 1000))
+    msg[CHECK_X_IDX] = str(random.randint(0, 1000))
+    msg[CHECK_Y_IDX] = str(random.randint(0, 1000))
 
     msg = ';'.join(msg)
 
